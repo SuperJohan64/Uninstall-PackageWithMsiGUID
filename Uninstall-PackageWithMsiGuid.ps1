@@ -9,7 +9,7 @@ foreach ($PackageName in $PackageNames) {
             Start-Process -FilePath msiexec.exe -ArgumentList "/x $PackageGuid /qn /norestart" -Wait -ErrorAction Stop
             Write-Host "Uninstall complete."
         }
-        Catch {Write-Host "Uninstall failed.`nCheck that the package has a valid MSI GUID and that the uninstall arguments are correct"}
+        Catch {Write-Host "Msiexec failed.`nCheck that the package has a valid MSI GUID and that the uninstall arguments are correct"}
     }
     Catch {
         Write-Host "Could not uninstall package."
