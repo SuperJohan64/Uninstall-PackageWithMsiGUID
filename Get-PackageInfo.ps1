@@ -1,7 +1,6 @@
 $Packages = Get-Package
 $PackageInfo = @()
 
-
 foreach ($Package in $Packages) {
     $PackageInfo += New-Object -TypeName psobject -Property @{
         Name = $Package.Name
