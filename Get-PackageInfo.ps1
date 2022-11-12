@@ -13,5 +13,5 @@ foreach ($Package in $Packages) {
 
 $PackageInfo `
     | Select-Object Name, Version, Source, ProviderName, MsiGuid `
-    | Sort-Object Name `
+    | Sort-Object ProviderName, Name `
     | Out-GridView
