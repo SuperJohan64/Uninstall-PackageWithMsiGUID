@@ -13,7 +13,7 @@ foreach ($PackageName in $PackageNames) {
             }
             Catch {Write-Host "Msiexec failed."}
         }
-        Else {Write-Host "Package is not a MSI.`nCould not uninstall package."}
+        Else {Write-Host "Package is not a MSI."}
     }
     Catch {Write-Host "Could not uninstall package."}
 }
